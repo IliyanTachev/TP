@@ -1,4 +1,7 @@
 <p>
-  <strong>Text:</strong>
+  Message</br>
   <%= @message.content %>
+  <% @message.destroy %>
 </p>
+
+
