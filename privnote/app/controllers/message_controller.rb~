@@ -1,0 +1,20 @@
+class MessageController < ApplicationController
+	def show
+   	 	@message = Message.find(params[:id])
+  	end
+	
+	def new
+	end
+	
+	def create
+			 @message = Message.new(message_params)
+	 
+	  		@message.save
+	 		 render :show
+	end
+	 
+	private
+	def message_params
+	    params.require(:message).permit(:text)
+	end
+end

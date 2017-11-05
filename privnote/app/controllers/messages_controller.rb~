@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 
       params[:message] = {"content" => message_hash["message"]}
 
-      @message = Message.create({text: params[:message]})
+      @message = Message.create({content: params[:message]})
 
       url = '<?xml version = "1.0" encoding = "UTF-8" standalone ="yes"?>' + 
             "<url>" + 

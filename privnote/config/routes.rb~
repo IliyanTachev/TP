@@ -1,0 +1,6 @@
+Rails.application.routes.draw do
+	root 'messages#new'	
+	resources :messages	
+	post "notes/api" => "messages#create"
+		
+end
